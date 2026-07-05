@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
   res.status(200).json({ posts });
 });
 
+// Post route to create a new post
 router.post("/", (req, res) => {
   console.log(req.body);
   const newPost = {
@@ -24,6 +25,20 @@ router.post("/", (req, res) => {
   }
   posts.push(newPost);
   res.status(201).json({ message: "Post created successfully", posts });
+});
+
+// PUT route to update a post by ID
+router.put("/:id", (req, res) => {
+  const postId = parseInt(req.params.id);
+
+  const post = posts.find((p) => p.id === postId);
+  if (!post) {
+    return res.status(404).json({ message: "Post not found" });
+  }
+
+  post.title = req.body.title;
+  post.content = req.body.content;
+  res.status(200).json({ message: "Post updated successfully", post });
 });
 
 export default router;
