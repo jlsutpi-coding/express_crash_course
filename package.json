@@ -1,0 +1,16 @@
+{
+  "name": "express_crash_course",
+  "version": "1.0.0",
+  "description": "express carsh course from Traversy Media",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch --env-file=.env index.js"
+  },
+  "author": "JL Sut Pi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
