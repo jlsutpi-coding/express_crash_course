@@ -31,7 +31,6 @@ export const getPostById = (req, res, next) => {
 // @access Public
 
 export const createPost = (req, res, next) => {
-  console.log(req.body);
   if (!req.body.title || !req.body.content) {
     const error = new Error("Title and content are required");
     error.status = 400;

@@ -3,9 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Posts</title>
   </head>
   <body>
-    <h1>Welcome to the Home Page</h1>
+    <h1>Posts</h1>
+    <button id="getPostsBtn">Get Posts</button>
+    <div id="output"></div>
+
+    <div>
+      <form id="createPostForm">
+        <input type="text" id="titleInput" placeholder="Title" required />
+        <input type="text" id="contentInput" placeholder="Content" required />
+        <button type="submit" id="createPostBtn">Add Post</button>
+      </form>
+    </div>
+
+    <script src="../js/main.js"></script>
   </body>
 </html>
